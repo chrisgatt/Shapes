@@ -8,9 +8,11 @@ include_directories(${CMAKE_SOURCE_DIR})
 # C++ library
 add_library (Polygons SHARED Rectangle.cpp Square.cpp)
 
-# Construction of the main program
+# Construction of the main programs
 add_executable (encapsulation encapsulation.cpp)
 target_link_libraries (encapsulation Polygons)
+add_executable (polymorphism polymorphism.cpp)
+target_link_libraries (polymorphism Polygons)
 
 # Doxygen
 find_package(Doxygen)
