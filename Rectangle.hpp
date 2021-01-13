@@ -12,8 +12,9 @@
 
 class Rectangle
 {
-    double m_height;
-    double m_width;
+    public:
+        double m_height;
+        double m_width;
     public:
         /**
          * @brief Construct a new Rectangle object
