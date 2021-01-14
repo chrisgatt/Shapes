@@ -1,6 +1,8 @@
 #ifndef __RECTANGLE_HPP
 #define __RECTANGLE_HPP
 
+#include<string>
+
 /**
  * CS-17, Utilities.hpp
  * This class represent a rectangle
@@ -37,6 +39,12 @@ class Rectangle
          * @return double 
          */
         virtual double perimeter ();
+        /**
+         * @brief Give informations on the object
+         * 
+         * @return string 
+         */
+        virtual std::string info ();
 };
 
 #endif //__RECTANGLE_HPP

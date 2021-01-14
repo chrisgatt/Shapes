@@ -24,3 +24,9 @@ double Rectangle::perimeter ()
 {
     return (2 * (m_width + m_height));
 }
+
+// //////////////////////////////////////////////////////////////////////
+std::string Rectangle::info () 
+{
+    return ("Je suis un rectangle.");
+}

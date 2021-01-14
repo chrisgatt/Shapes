@@ -27,6 +27,12 @@ class Square: public Rectangle
          */
         Square (const double &iSide);
         virtual ~Square ();
+        /**
+         * @brief Give informations on the object
+         * 
+         * @return string 
+         */
+        virtual std::string info ();
 };
 
 #endif //__SQUARE_HPP
