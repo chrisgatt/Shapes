@@ -59,13 +59,13 @@ BOOST_AUTO_TEST_CASE (shapes1) {
     Rectangle *rect = new Rectangle (10, 5);
     assert (rect != nullptr);
     std::cout << "rectangle size: 10x5 cm, area: " << rect->area() << " cm2." << std::endl;
-    BOOST_CHECK_MESSAGE (rect->area() == 50.0d,
+    BOOST_CHECK_MESSAGE (rect->area() == 50.0,
                        "The area should be 50");
 
     Square *sq = new Square (5);
     assert (sq != nullptr);
     std::cout << "square size: 10x5 cm, area: " << sq->area() << " cm2." << std::endl;
-    BOOST_CHECK_MESSAGE (sq->area() == 25.0d,
+    BOOST_CHECK_MESSAGE (sq->area() == 25.0,
                        "The area should be 25");
 
 
