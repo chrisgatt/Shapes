@@ -8,15 +8,26 @@ include_directories(${CMAKE_SOURCE_DIR})
 # C++ library
 add_library (Shapes SHARED Rectangle.cpp Square.cpp Circle.cpp)
 
-# Construction of the main programs
+# Construction of the programs
 add_executable (encapsulation encapsulation.cpp)
 target_link_libraries (encapsulation Shapes)
 add_executable (polymorphism polymorphism.cpp)
 target_link_libraries (polymorphism Shapes)
 add_executable (inheritance inheritance.cpp)
 target_link_libraries (inheritance Shapes)
-add_executable (test test.cpp)
-target_link_libraries (test Shapes)
+
+# Unitary Test
+enable_testing()
+# Register the test binary target
+add_executable (testShapes testShapes.cpp)
+# Tell the test binary that it depends on all those libraries
+target_link_libraries (testShapes Shapes boost_unit_test_framework ${Boost_FILESYSTEM_LIBRARY} ${Boost_SYSTEM_LIBRARY})
+# Tell how to test, i.e., how to run the test binaries 
+# and collect the results
+add_test (testShapes testShapes)
+# Map the checker to ctest
+add_custom_target (check
+  COMMAND ${CMAKE_CTEST_COMMAND} DEPENDS testShapes)
 
 # Doxygen
 find_package(Doxygen)
