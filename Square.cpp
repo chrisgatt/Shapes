@@ -5,7 +5,7 @@
 #include<Square.hpp>
 
 // //////////////////////////////////////////////////////////////////////
-Square::Square (const double &iSide): Rectangle (iSide, iSide) {}
+Square::Square (const double &iSide): m_side(iSide), Rectangle (iSide, iSide) {}
 
 // //////////////////////////////////////////////////////////////////////
 Square::~Square () {}
