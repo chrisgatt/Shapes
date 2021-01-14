@@ -17,7 +17,8 @@
 
 class Square: public Rectangle
 {
-    double m_side;
+    public:
+        double m_side;
     public:
         /**
          * @brief Construct a new Square object

@@ -21,7 +21,8 @@ int main ()
     Square *sq;
     sq = (Square*) object;
     std::cout << "sq->info(): " << sq->info() << std::endl;
-
+    std::cout << "object width: " << object->m_width << " height: " << object->m_height << std::endl;
+    std::cout << "square side: " << sq->m_side << std::endl;
     delete object; object=nullptr; sq=nullptr; // We need to delete any object created with new to avoir memory leak. 
     return 0;
 }
