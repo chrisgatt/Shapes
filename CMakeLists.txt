@@ -4,7 +4,10 @@ project(Shapes)
 
 set(CMAKE_CXX_STANDARD 17)
 
-include_directories(${CMAKE_SOURCE_DIR})
+include_directories(/usr/local/include ${CMAKE_SOURCE_DIR})
+link_directories(/usr/local/lib)
+find_package(Boost COMPONENTS system filesystem REQUIRED)
+
 # C++ library
 add_library (Shapes SHARED Rectangle.cpp Square.cpp Circle.cpp)
 
