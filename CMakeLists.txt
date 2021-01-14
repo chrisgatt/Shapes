@@ -13,6 +13,8 @@ add_executable (encapsulation encapsulation.cpp)
 target_link_libraries (encapsulation Shapes)
 add_executable (polymorphism polymorphism.cpp)
 target_link_libraries (polymorphism Shapes)
+add_executable (inheritance inheritance.cpp)
+target_link_libraries (inheritance Shapes)
 add_executable (test test.cpp)
 target_link_libraries (test Shapes)
 
